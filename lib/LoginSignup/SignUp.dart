@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:soilmate/Bottom.dart';
 import 'package:soilmate/LoginSignup/LoginPage.dart';
+import 'package:soilmate/LoginSignup/Phone.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -105,7 +106,7 @@ class _SignupPageState extends State<SignupPage> {
                       // Navigate to LoginPage and show a snackbar with a success message
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Bottom()),
+                        MaterialPageRoute(builder: (context) => MyPhone()),
                       );
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
