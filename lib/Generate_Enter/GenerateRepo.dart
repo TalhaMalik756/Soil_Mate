@@ -1,4 +1,4 @@
-import 'dart:io'; // Add this import statement
+import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
@@ -25,7 +25,6 @@ class _GenerateRepoState extends State<GenerateRepo> {
   @override
   void initState() {
     super.initState();
-    // Automatically generate the PDF when the widget is initialized
     generatePDF();
   }
 
@@ -35,20 +34,25 @@ class _GenerateRepoState extends State<GenerateRepo> {
       backgroundColor: Color(0xFFECFFDC),
       appBar: AppBar(
         backgroundColor: Color(0xFFECFFDC),
-        title: Text('Report'),
+        title: Text("Your Soil's Report"),
       ),
       body: Stack(
         children: [
-          Center(
-            child: Container(
-              height: 620, // Adjust height as needed
-              width: 350, // Adjust width as needed
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
+          Positioned(
+            top: 80, // Adjust the top position as needed
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Container(
+                height: 535, // Adjust height as needed
+                width: 370, // Adjust width as needed
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                ),
+                child: _generatedPdfBytes != null
+                    ? PdfViewerWidget(pdfBytes: _generatedPdfBytes!)
+                    : CircularProgressIndicator(), // Display loading indicator while PDF is generated
               ),
-              child: _generatedPdfBytes != null
-                  ? PdfViewerWidget(pdfBytes: _generatedPdfBytes!)
-                  : CircularProgressIndicator(), // Display loading indicator while PDF is generated
             ),
           ),
           Positioned(

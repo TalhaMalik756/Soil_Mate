@@ -9,7 +9,7 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0.36),
+        preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0.35),
         child: AppBar(
           leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.white),
@@ -33,7 +33,7 @@ class Settings extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/CountrySide.jpg'),
+                image: AssetImage('assets/HomeSettings.jpeg'),
                 fit: BoxFit.fill,
               ),
             ),

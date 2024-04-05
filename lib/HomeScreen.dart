@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soilmate/DippingPoint.dart';
+import 'package:soilmate/DippingPoint/DippingPoint.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/CountrySide.jpg'),
+                image: AssetImage('assets/HomeSettings.jpeg'),
                 fit: BoxFit.fill,
               ),
             ),

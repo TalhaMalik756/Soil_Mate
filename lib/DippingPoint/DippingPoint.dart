@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:soilmate/Generate_Enter/GenerateRepo.dart';
+import 'Help.dart';
 
 class DippingPoint extends StatefulWidget {
   const DippingPoint({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class _DippingPointState extends State<DippingPoint> {
           // Background image
           Positioned.fill(
             child: Image.asset(
-              'assets/Soil.jpg', // Replace with your image path
+              'assets/BK05.jpg', // Replace with your image path
               fit: BoxFit.cover,
             ),
           ),
@@ -31,6 +33,20 @@ class _DippingPointState extends State<DippingPoint> {
               icon: Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () {
                 Navigator.pop(context);
+              },
+            ),
+          ),
+          // Help button
+          Positioned(
+            top: 35,
+            right: 5,
+            child: IconButton(
+              icon: Icon(Icons.help, color: Colors.white),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Help()), // Navigate to Help.dart
+                );
               },
             ),
           ),

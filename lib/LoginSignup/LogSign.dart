@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:soilmate/LoginSignup/LoginPage.dart';
 import 'package:soilmate/LoginSignup/SignUp.dart';
 
@@ -27,7 +28,7 @@ class LogSign extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Welcome",
-                    style: TextStyle(
+                    style: GoogleFonts.creteRound(
                       fontWeight: FontWeight.bold,
                       fontSize: 50,
                       color: Color(0xFF172808),
